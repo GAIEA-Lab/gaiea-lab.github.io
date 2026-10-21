@@ -29,10 +29,10 @@ permalink: /people
 </div>
 </div>
 <div class="col-sm-10" style="display: flex; flex-direction: column;">
-<h4 style="margin-top: 0; margin-bottom: 4px;"><b>{{ member.name }}</b></h4>
+<h4 class="person-name">{{ member.name }}</h4>
 {% if member.info %}<p class="person-title">{{ member.info }}</p>{% endif %}
 <p class="person-bio">{{ member.description }}</p>
-<div style="display: flex; gap: 8px;">
+<div class="person-links" style="display: flex; gap: 8px;">
 {% if member.website %}<a href="{{ member.website }}" title="Website" aria-label="{{ member.name }} website"><i class="mdi mdi-web"></i></a>{% endif %}
 {% if member.google_scholar %}<a href="{{ member.google_scholar }}" title="Google Scholar" aria-label="{{ member.name }} Google Scholar"><i class="mdi mdi-school"></i></a>{% endif %}
 {% if member.github %}<a href="{{ member.github }}" title="GitHub" aria-label="{{ member.name }} GitHub"><i class="mdi mdi-github"></i></a>{% endif %}
