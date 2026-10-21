@@ -1,0 +1,11 @@
+###### INSTRUCTIONS:
+# Required fields: title, description, image, link, date
+
+# - Date: format YYYY-MM-DD
+#     The order of the slides is determined by the date and will only show the newest 10 slides
+# - Image: should be in the /images/carouselpic/ directory
+# - Link: a valid URL to the paper
+# - Description: a short description of the slide (<1 sentence)
+# - Image: should be a rectangular image (short and wide)
+
+# Make sure to check how it looks using `jekyll serve`

@@ -1,0 +1,9 @@
+# Papers the Semantic Scholar sync should never add (e.g. a different author with the
+# same name, duplicates, errata). Deleting an entry from publications.yml alone is not
+# enough: the next weekly sync would add it back.
+
+dois:
+  # - "10.1234/example.doi"
+
+titles:
+  # - "Exact Title of the Paper"   (matched ignoring case and punctuation)

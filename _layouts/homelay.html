@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+  {% if site.data.carousel.size > 0 %}{% include carousel.html %}{% endif %}
+  <div id="homeid" class="col-sm-8">
+	{{ content }}
+  </div>
+  <div id="newsid" class="col-sm-4" >
+	{% include news.html %}
+  </div>

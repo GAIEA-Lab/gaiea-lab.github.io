@@ -1,0 +1,15 @@
+# Synced from the lab's project Google Form via
+# `python3 scripts/update_projects_from_google_form.py`.
+#
+# - title: Project Title
+#   image: https://... (public image URL or local filename)
+#   description: Couple sentences about the project.
+#   publication_date: YYYY-MM-DD
+#   year: YYYY
+#   links:
+#     - label: "Website"
+#       url: url
+#     - label: "Demo"
+#       url: url
+#   themes:
+#     - (names from research_themes.yml)

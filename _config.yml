@@ -1,0 +1,60 @@
+# Site settings
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+title: GAIEA Lab
+description: > # this means to ignore newlines until "url:"
+  Website of the GAIEA Lab.
+email: "" # TODO: lab contact email (shown in the footer when set)
+
+# The site is served from https://<org>.github.io/<repo> until a custom domain is set up.
+# When you add a custom domain (repo Settings -> Pages), set url to it and baseurl to "".
+url: "https://gaiea-lab.github.io"
+baseurl: "/gaiea-lab"
+
+# Lab branding. Put image files in /images/logopic/.
+logo: "" # e.g. gaiea_logo.png; leave empty to show the lab name only
+favicon: "" # e.g. favicon.ico; leave empty for none
+
+# Shown in the footer
+institution:
+  name: "" # TODO: e.g. University / Department name
+  url: ""
+accessibility_url: "" # many universities require an accessibility link in the footer
+
+# Linked from the Publications page
+google_scholar_url: "" # TODO: PI's Google Scholar profile URL
+
+# Linked from the Join Us page
+interest_form_url: "" # TODO: Google Form for prospective students/postdocs
+
+include:
+  - .htaccess
+  - _pages
+
+exclude:
+  - scripts
+  - README.md
+  - LICENSE.md
+
+sass:
+  sass_dir: _sass
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links

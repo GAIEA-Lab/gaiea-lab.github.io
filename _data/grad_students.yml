@@ -1,0 +1,28 @@
+# Copy the template below and uncomment it. Photos go in /images/teampic/.
+# All link fields are optional; delete any you don't need.
+
+# - name: First Last
+#   photo: first.jpg
+#   info: PhD Student
+#   website: https://...
+#   twitter: https://twitter.com/...
+#   linkedin: https://www.linkedin.com/in/...
+#   github: https://github.com/...
+#   google_scholar: https://scholar.google.com/citations?user=...
+#   description: >
+#     A couple of sentences about their research.
+
+- name: Amritha Pallavoor
+  photo:
+  info: PhD Student
+  description:
+
+- name: Boe Zhou
+  photo:
+  info: PhD Student
+  description:
+
+- name: Kevin Valencia
+  photo:
+  info: PhD Student
+  description:

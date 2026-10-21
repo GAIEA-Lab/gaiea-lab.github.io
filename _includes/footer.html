@@ -1,0 +1,27 @@
+<!-- Your page content goes here -->
+<div id="footer">
+	<div class="panel-footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-8">
+					<!-- Left-hand side content -->
+					<p style="margin: 0px;">&copy {{ site.time | date: "%Y" }} {{ site.title }}.{% if site.institution.name.size > 0 %} {% if site.institution.url.size > 0 %}<a href="{{ site.institution.url }}">{{ site.institution.name }}</a>{% else %}{{ site.institution.name }}{% endif %}.{% endif %}
+						<div style="line-height:50%;">
+							<br>
+						</div>
+						Site made with <a href="https://jekyllrb.com">Jekyll</a> and
+						adapted from the <a href="https://github.com/mitbeerylab/mitbeerylab.github.io">Beery Lab</a> and
+						<a href="https://github.com/coleygroup/coleygroup.github.io">Coley Group</a> websites.
+					</p>
+				</div>
+				<div class="col-sm-4 text-right">
+					{% if site.email.size > 0 %}<a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" style="margin-right: 10px;"></i></a>{% endif %}
+					{% if site.accessibility_url.size > 0 %}<a href="{{ site.accessibility_url }}" aria-label="Accessibility">Accessibility</a>{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>

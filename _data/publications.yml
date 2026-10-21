@@ -1,0 +1,29 @@
+# Copy this template below and uncomment to add a new publication, and delete irrelevant fields.
+# Note that "doi" supercedes "preprint".
+
+# Minimum required fields: "title", "authors", "journal", "year", "url", "themes"
+#   For journal papers, be sure to at least include "doi"
+#   For preprints, be sure to at least include "preprint", "preprint_url"
+#   For conference papers, be sure to at least include "preprint_url"
+
+# For preprints, do NOT include the "doi" field, and DO include the "preprint" and related fields.
+# For conference papers, do NOT include "doi" OR "preprint" fields.
+#   DO include "url", "preprint_url", "preprint_site", "preprint_year".
+
+# - title: "title"
+#   authors: author1, author2, author3, ...
+#   journal: journal
+#   year: year
+#   url: url
+#   doi: doi
+#   preprint: preprint
+#   volume: volume
+#   issue: issue
+#   pages: page-page
+#   preprint_url: preprint_url
+#   preprint_year: preprint_year
+#   preprint_site: preprint_site
+
+# This file is filled in automatically each week by
+# `scripts/update_publications_semanticscholar.py` (see README).
+# To stop a paper from coming back after you delete it, add it to publications_exclude.yml.

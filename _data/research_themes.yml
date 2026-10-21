@@ -1,0 +1,12 @@
+# Research themes used to tag and filter projects on the Projects page.
+# The project Google Form's "Research Theme" answers must match these names
+# (or an alias in research_theme_aliases.yml), or the sync script will fail.
+# TODO: replace these placeholders with the lab's themes.
+
+- name: Theme One
+  color: "#4C78A8"
+  darker_color: "#2F5B88"
+
+- name: Theme Two
+  color: "#4CAF50"
+  darker_color: "#2E7D32"

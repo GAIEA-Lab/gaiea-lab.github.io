@@ -1,0 +1,12 @@
+# Principal investigator(s). Shown first on the People page.
+# Photos go in /images/teampic/. All link fields are optional.
+
+- name: Lauren Gillespie
+  photo: # e.g. pi.jpg
+  info: Principal Investigator
+  website:
+  twitter:
+  linkedin:
+  github:
+  google_scholar:
+  description:

@@ -1,0 +1,6 @@
+# Newest first. The four most recent items show on the home page.
+# headline supports Markdown; link is optional.
+
+# - date: October 2026
+#   headline: "The lab website is live!"
+#   link: https://...
