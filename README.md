@@ -17,7 +17,7 @@ The GAIEA Lab website: a Jekyll site deployed to GitHub Pages by GitHub Actions.
 | Publications to never add | `_data/publications_exclude.yml` | hand |
 | Projects page + home carousel | `_data/software.yml`, `_data/carousel.yml` | **weekly from a Google Form** (hand edits also kept) |
 | Project research themes | `_data/research_themes.yml`, `_data/research_theme_aliases.yml` | hand |
-| Talks & Teaching | `_outreach/talks.md`, `_outreach/teaching.md` (or a Google Sheet) | on every deploy |
+| Talks & Teaching | "GAIEA Lab Talks & Teaching" Google Sheet (Talks and Teaching tabs), plus the tables in `_outreach/*.md` | on every deploy |
 
 Empty sections (alumni, undergrads, carousel, etc.) are hidden until they have entries.
 
@@ -47,9 +47,12 @@ Empty sections (alumni, undergrads, carousel, etc.) are hidden until they have e
    and a Paper link. Image uploads/links on Google Drive must be shared as "anyone with the link".
    Link the form to a Google Sheet, then File → Share → Publish to web → that sheet as CSV. Save the CSV URL
    as Actions variable `PROJECTS_SHEET_CSV_URL`.
-5. **Talks & Teaching (optional Google Sheet):** add rows to the tables in `_outreach/*.md`, or put a
-   published-CSV URL in their `google_sheet_csv` front matter (columns: Title, Speakers, Host, Date, External).
-   Rows from both are merged on each deploy.
+5. **Talks & Teaching:** add rows to the lab's Talks & Teaching Google Sheet (columns: Title, Speakers, Host,
+   Date, External). Each tab is published as CSV and linked from the `google_sheet_csv` line in
+   `_outreach/talks.md` / `_outreach/teaching.md`; rows can also be added to the tables in those files.
+   Both are merged on every deploy (any push, plus every Monday after the publication/project syncs).
+   Title, Date and External (a link) are required; Sheet rows missing one are skipped with a warning in the
+   deploy log, so check there if an entry doesn't appear.
 6. **Custom domain (optional):** set it in Settings → Pages, then set `url` to it in `_config.yml`.
 
 The publication and project jobs run on Mondays (09:00 and 09:30 UTC), commit any changes and trigger a

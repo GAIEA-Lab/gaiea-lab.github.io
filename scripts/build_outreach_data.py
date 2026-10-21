@@ -275,6 +275,14 @@ def load_items(item_type: str, config):
     for row in local_rows:
         merged[row_key(row, item_type)] = row
     for row in remote_rows:
+        if not any(str(value or "").strip() for value in row.values()):
+            continue
+        # Shared Sheet rows are often half-filled; skip bad ones instead of failing the whole deploy.
+        try:
+            normalize_row(row, item_type, config["label"], relative_path)
+        except ValueError as err:
+            print(f"Warning: skipping Google Sheet row in {relative_path} ({err}): {row}")
+            continue
         key = row_key(row, item_type)
         existing = merged.get(key)
         merged[key] = choose_preferred_row(existing, row) if existing else row
