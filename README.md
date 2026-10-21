@@ -49,8 +49,7 @@ Empty sections (alumni, undergrads, carousel, etc.) are hidden until they have e
 5. **Talks & Teaching (optional Google Sheet):** add rows to the tables in `_outreach/*.md`, or put a
    published-CSV URL in their `google_sheet_csv` front matter (columns: Title, Speakers, Host, Date, External).
    Rows from both are merged on each deploy.
-6. **Custom domain (optional):** set it in Settings → Pages, then set `url` to it and `baseurl: ""` in
-   `_config.yml`.
+6. **Custom domain (optional):** set it in Settings → Pages, then set `url` to it in `_config.yml`.
 
 The publication and project jobs run on Mondays (09:00 and 09:30 UTC), commit any changes and trigger a
 redeploy. Both can also be run by hand from the Actions tab.
@@ -68,7 +67,7 @@ redeploy. Both can also be run by hand from the Actions tab.
 gem install jekyll
 pip install pyyaml requests     # only needed to run the scripts
 python3 scripts/build_outreach_data.py
-jekyll serve                    # http://localhost:4000/gaiea-lab/
+jekyll serve                    # http://localhost:4000/
 ```
 
 Restart `jekyll serve` after editing `_config.yml`.

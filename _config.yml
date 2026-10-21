@@ -7,10 +7,9 @@ description: > # this means to ignore newlines until "url:"
   Website of the GAIEA Lab.
 email: "" # TODO: lab contact email (shown in the footer when set)
 
-# The site is served from https://<org>.github.io/<repo> until a custom domain is set up.
-# When you add a custom domain (repo Settings -> Pages), set url to it and baseurl to "".
+# If you add a custom domain (repo Settings -> Pages), set url to it.
 url: "https://gaiea-lab.github.io"
-baseurl: "/gaiea-lab"
+baseurl: ""
 
 # Lab branding. Put image files in /images/logopic/.
 logo: "" # e.g. gaiea_logo.png; leave empty to show the lab name only
