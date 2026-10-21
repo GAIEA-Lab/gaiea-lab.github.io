@@ -12,8 +12,8 @@ url: "https://gaiea-lab.github.io"
 baseurl: ""
 
 # Lab branding. Put image files in /images/logopic/.
-logo: "" # e.g. gaiea_logo.png; leave empty to show the lab name only
-favicon: "" # e.g. favicon.ico; leave empty for none
+logo: "gaiea_logo.png" # leave empty to show the lab name only
+favicon: "gaiea_favicon.png" # browser tab icon; leave empty for none
 
 # Shown in the footer
 institution:
