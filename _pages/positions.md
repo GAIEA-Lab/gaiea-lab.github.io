@@ -11,7 +11,7 @@ permalink: /join-us
 ### PhD students
 
 We are recruiting PhD students for the 2026–2027 cycle. If you are interested, please fill out the [interest form]({{ site.interest_form_url }}); Lauren will follow up in the fall.
-Applications to the University of Michigan's [PhD in Sustainability](https://seas.umich.edu/academics/doctoral-phd) at SEAS are due December 1. A [dual-degree PhD program](https://rackham.umich.edu/navigating-your-degree/student-initiated-doctoral-program/) is also available.
+Applications to the University of Michigan's [PhD in Sustainability](https://seas.umich.edu/academics/doctoral-phd) at SEAS are due December 1. Rackham also has great support for interdisciplinary studies and offers a [dual-degree PhD program](https://rackham.umich.edu/navigating-your-degree/student-initiated-doctoral-program/), enabling SEAS PhD students to get a PhD in both Sustainability and another department if desired.
 
 ### Postdocs
 
