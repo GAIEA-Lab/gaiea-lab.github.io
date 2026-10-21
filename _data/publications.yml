@@ -27,3 +27,74 @@
 # This file is filled in automatically each week by
 # `scripts/update_publications_semanticscholar.py` (see README).
 # To stop a paper from coming back after you delete it, add it to publications_exclude.yml.
+
+- title: Automated mask generation in citizen science smartphone photos and their value for mapping plant species in drone imagery
+  authors: Salim Soltani, Lauren E. Gillespie, Moises Exposito-Alonso, O. Ferlian, N. Eisenhauer, Hannes Feilhauer, T. Kattenborn
+  journal: Biogeosciences
+  year: 2025
+  url: https://doi.org/10.5194/bg-22-6545-2025
+  themes: []
+  suggested_themes:
+  - Computer Vision
+  - Datasets & Benchmarks
+  - Biodiversity Monitoring
+  - Scientific Workflows
+  - Environmental Sensing
+  doi: 10.5194/bg-22-6545-2025
+- title: 'DivShift: Exploring Domain-Specific Distribution Shifts in Large-Scale, Volunteer-Collected Biodiversity Datasets'
+  authors: Elena Sierra, Lauren E. Gillespie, Salim Soltani, Moises Exposito-Alonso, T. Kattenborn
+  journal: AAAI Conference on Artificial Intelligence
+  year: 2024
+  url: https://doi.org/10.1609/aaai.v39i27.35060
+  themes: []
+  suggested_themes:
+  - Computer Vision
+  - Datasets & Benchmarks
+  - Biodiversity Monitoring
+  - Interpretable & Reliable AI
+  - Data-Limited Learning
+  doi: 10.1609/aaai.v39i27.35060
+- title: Contrastive ground-level image and remote sensing pre-training improves representation learning for natural world imagery
+  authors: A. Huynh, Lauren E. Gillespie, Jael Lopez-Saucedo, Claire Tang, Rohan Sikand, Moises Exposito-Alonso
+  journal: European Conference on Computer Vision
+  year: 2024
+  url: https://doi.org/10.48550/arxiv.2409.19439
+  themes: []
+  suggested_themes:
+  - Computer Vision
+  - Datasets & Benchmarks
+  - Biodiversity Monitoring
+  - Environmental Sensing
+  - Multimodal Modeling
+  doi: 10.48550/arxiv.2409.19439
+- title: Deep learning models map rapid plant species changes from citizen science and remote sensing data
+  authors: Lauren E. Gillespie, Megan Ruffley, Moisés Expósito-Alonso
+  journal: Proceedings of the National Academy of Sciences of the United States of America
+  year: 2024
+  url: https://doi.org/10.1073/pnas.2318296121
+  themes: []
+  suggested_themes:
+  - Computer Vision
+  - Biodiversity Monitoring
+  - Environmental Sensing
+  doi: 10.1073/pnas.2318296121
+- title: 'DivShift: Exploring Domain-Specific Distribution Shift in Volunteer-Collected Biodiversity Datasets'
+  authors: Elena Sierra, Lauren E. Gillespie, Salim Soltani, Moises Exposito-Alonso, T. Kattenborn
+  journal: arXiv.org
+  year: 2024
+  url: https://doi.org/10.48550/arxiv.2410.19816
+  themes: []
+  suggested_themes:
+  - Datasets & Benchmarks
+  - Biodiversity Monitoring
+  - Interpretable & Reliable AI
+  - Data-Limited Learning
+  doi: 10.48550/arxiv.2410.19816
+- title: Writing A Paper Scene Graph Prediction with Limited Labels
+  authors: Lauren E. Gillespie, Michael S. Bernstein, V. Chen, P. Varma, Ranjay Krishna, Christopher Ré, Fei-Fei Li
+  journal: Unknown venue
+  year: 2019
+  url: https://www.semanticscholar.org/paper/02d30137713f40971a9aa78a26cb935d4aa1edb5
+  themes: []
+  suggested_themes:
+  - Data-Limited Learning
