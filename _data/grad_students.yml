@@ -1,28 +1,42 @@
 # Copy the template below and uncomment it. Photos go in /images/teampic/.
 # All link fields are optional; delete any you don't need.
+# info is the title line under the name; it can contain HTML links.
 
 # - name: First Last
 #   photo: first.jpg
 #   info: PhD Student
 #   website: https://...
-#   twitter: https://twitter.com/...
-#   linkedin: https://www.linkedin.com/in/...
-#   github: https://github.com/...
 #   google_scholar: https://scholar.google.com/citations?user=...
+#   github: https://github.com/...
+#   email: uniqname@umich.edu
+#   linkedin: https://www.linkedin.com/in/...
+#   twitter: https://twitter.com/...
 #   description: >
 #     A couple of sentences about their research.
 
 - name: Amritha Pallavoor
   photo: amritha_pallavoor.jpg
-  info: PhD Student
+  info: PhD Student, U-M SEAS+CSE
+  website: https://sites.google.com/view/amrithapallavoor
+  google_scholar: https://scholar.google.com/citations?user=vCLnVUYAAAAJ&hl=en
+  github: https://github.com/amrithasp02
+  email: amrithap@umich.edu
   description:
 
 - name: Boe Zhou
   photo: boe_zhou.jpg
-  info: PhD Student
+  info: 'PhD Student, U-M SEAS+CSE • <a href="https://micde.umich.edu/academic-programs/fellowships/">MICDE</a> Graduate Fellow'
+  website: https://boezzz.com/
+  google_scholar: https://scholar.google.com/citations?user=PPu8bK8AAAAJ
+  github: https://github.com/boezzz
+  email: boezhou@umich.edu
   description:
 
 - name: Kevin Valencia
   photo: kevin_valencia.jpg
-  info: PhD Student
+  info: 'PhD Student, U-M CSE+SEAS • <a href="https://www.krellinst.org/csgf/profile/valencia2026">DOE CSGF</a> recipient; <a href="https://rackham.umich.edu/prospective-students/rackham-merit-fellowship-program/">U-M RMF</a> Fellow'
+  website: https://kevinval04.github.io/
+  google_scholar: https://scholar.google.com/citations?user=JnlcclMAAAAJ&hl=en
+  github: https://github.com/kevinval04
+  email: kevinva@umich.edu
   description:

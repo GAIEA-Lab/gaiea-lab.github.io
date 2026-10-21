@@ -103,6 +103,10 @@ p.byline {
 	text-align: center;
 }
 
+#homeid {
+  padding-top: 20px;
+}
+
 #newsid img {
 	margin-top: 6px;
 	margin-bottom: 6px;
@@ -129,6 +133,18 @@ p.byline {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+}
+
+.person-title {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 0 8px;
+}
+
+/* Reserves about a paragraph of space so rows line up before bios are written */
+.person-bio {
+  min-height: 4.5em;
+  margin: 0 0 8px;
 }
 
 .group-pic {

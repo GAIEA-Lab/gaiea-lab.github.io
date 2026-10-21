@@ -29,16 +29,18 @@ permalink: /people
 </div>
 </div>
 <div class="col-sm-10" style="display: flex; flex-direction: column;">
-<h4 style="margin-top: 0;"><b>{{ member.name }}</b> <i style="font-size: 0.8em; color: #888;">{{ member.info }}</i></h4>
-<p style="margin: 1px 0;">{{ member.description }}</p>
+<h4 style="margin-top: 0; margin-bottom: 4px;"><b>{{ member.name }}</b></h4>
+{% if member.info %}<p class="person-title">{{ member.info }}</p>{% endif %}
+<p class="person-bio">{{ member.description }}</p>
 <div style="display: flex; gap: 8px;">
-{% if member.website %}<a href="{{ member.website }}"><i class="mdi mdi-web"></i></a>{% endif %}
-{% if member.twitter %}<a href="{{ member.twitter }}"><i class="mdi mdi-twitter"></i></a>{% endif %}
-{% if member.linkedin %}<a href="{{ member.linkedin }}"><i class="mdi mdi-linkedin"></i></a>{% endif %}
-{% if member.github %}<a href="{{ member.github }}"><i class="mdi mdi-github"></i></a>{% endif %}
-{% if member.google_scholar %}<a href="{{ member.google_scholar }}"><i class="mdi mdi-school"></i></a>{% endif %}
-{% if member.youtube %}<a href="{{ member.youtube }}"><i class="mdi mdi-youtube"></i></a>{% endif %}
-{% if member.instagram %}<a href="{{ member.instagram }}"><i class="mdi mdi-instagram"></i></a>{% endif %}
+{% if member.website %}<a href="{{ member.website }}" title="Website" aria-label="{{ member.name }} website"><i class="mdi mdi-web"></i></a>{% endif %}
+{% if member.google_scholar %}<a href="{{ member.google_scholar }}" title="Google Scholar" aria-label="{{ member.name }} Google Scholar"><i class="mdi mdi-school"></i></a>{% endif %}
+{% if member.github %}<a href="{{ member.github }}" title="GitHub" aria-label="{{ member.name }} GitHub"><i class="mdi mdi-github"></i></a>{% endif %}
+{% if member.email %}<a href="mailto:{{ member.email }}" title="Email" aria-label="Email {{ member.name }}"><i class="mdi mdi-email"></i></a>{% endif %}
+{% if member.linkedin %}<a href="{{ member.linkedin }}" title="LinkedIn" aria-label="{{ member.name }} LinkedIn"><i class="mdi mdi-linkedin"></i></a>{% endif %}
+{% if member.twitter %}<a href="{{ member.twitter }}" title="Twitter" aria-label="{{ member.name }} Twitter"><i class="mdi mdi-twitter"></i></a>{% endif %}
+{% if member.youtube %}<a href="{{ member.youtube }}" title="YouTube" aria-label="{{ member.name }} YouTube"><i class="mdi mdi-youtube"></i></a>{% endif %}
+{% if member.instagram %}<a href="{{ member.instagram }}" title="Instagram" aria-label="{{ member.name }} Instagram"><i class="mdi mdi-instagram"></i></a>{% endif %}
 </div>
 </div>
 </div>
