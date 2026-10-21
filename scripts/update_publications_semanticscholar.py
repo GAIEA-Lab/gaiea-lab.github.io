@@ -20,6 +20,7 @@ import yaml
 API_BASE_URL = "https://api.semanticscholar.org/graph/v1"
 SEARCH_ENDPOINT = f"{API_BASE_URL}/paper/search"
 PAPER_ENDPOINT = f"{API_BASE_URL}/paper"
+AUTHOR_PAPERS_ENDPOINT = f"{API_BASE_URL}/author/{{author_id}}/papers"
 PUBLICATIONS_PATH = Path("_data/publications.yml")
 PUBLICATIONS_META_PATH = Path("_data/publications_meta.yml")
 PUBLICATIONS_EXCLUDE_PATH = Path("_data/publications_exclude.yml")
@@ -1126,6 +1127,56 @@ def fetch_search_papers_year_by_year(
     return list(deduped.values()), stats_by_year
 
 
+def fetch_author_papers(
+    session: requests.Session,
+    pacer: RequestPacer,
+    s2_author_id: str,
+    cutoff_date: date,
+    max_years: Optional[int],
+) -> Tuple[List[CandidatePaper], Dict[int, YearStats]]:
+    """Fetch every paper on one Semantic Scholar author profile (no name matching needed)."""
+    current_year = date.today().year
+    cutoff_year = cutoff_date.year
+    min_year = cutoff_year if max_years is None else max(cutoff_year, current_year - max_years + 1)
+    # The author papers endpoint takes "authors" rather than nested "authors.<field>" names.
+    fields = ",".join(dict.fromkeys("authors" if field.startswith("authors.") else field for field in SEARCH_BASE_FIELDS))
+
+    stats_by_year: Dict[int, YearStats] = {}
+    deduped: Dict[str, CandidatePaper] = {}
+    offset = 0
+    while True:
+        payload = request_json_with_retries(
+            session=session,
+            pacer=pacer,
+            url=AUTHOR_PAPERS_ENDPOINT.format(author_id=s2_author_id),
+            params={"fields": fields, "offset": offset, "limit": PAGE_SIZE},
+        )
+        page = payload.get("data") or []
+        for paper in page:
+            year = year_from_paper(paper)
+            if year is None or year < min_year:
+                continue
+            stats = stats_by_year.setdefault(year, YearStats(year=year))
+            stats.fetched += 1
+            stats.pi_matched += 1
+            if not passes_cutoff(paper, cutoff_date=cutoff_date, cutoff_year=cutoff_year):
+                continue
+            stats.date_passed += 1
+            dedupe_key = dedupe_key_for_paper(paper)
+            if not dedupe_key:
+                continue
+            candidate = CandidatePaper(paper=paper, source_year=year, dedupe_key=dedupe_key)
+            existing = deduped.get(dedupe_key)
+            if existing is None or best_record_score(candidate.paper) > best_record_score(existing.paper):
+                deduped[dedupe_key] = candidate
+
+        if payload.get("next") is None or not page:
+            break
+        offset = payload["next"]
+
+    return list(deduped.values()), stats_by_year
+
+
 def map_paper_to_yaml_entry(paper: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     title = (paper.get("title") or "").strip()
     if not title:
@@ -1423,15 +1474,27 @@ def main() -> int:
     pacer = RequestPacer(min_interval_seconds=MIN_REQUEST_INTERVAL_SECONDS)
     session = make_session()
     try:
-        candidates, stats_by_year = fetch_search_papers_year_by_year(
-            session=session,
-            pacer=pacer,
-            pi_name=pi_name,
-            normalized_pi_name=normalized_pi_name,
-            cutoff_date=lab_start_date,
-            s2_author_id=s2_author_id,
-            max_years=args.max_years,
-        )
+        if s2_author_id:
+            # With an author ID, use that profile's paper list so other people with the same name are never added.
+            print(f"Fetching papers from Semantic Scholar author profile {s2_author_id}.")
+            candidates, stats_by_year = fetch_author_papers(
+                session=session,
+                pacer=pacer,
+                s2_author_id=s2_author_id,
+                cutoff_date=lab_start_date,
+                max_years=args.max_years,
+            )
+        else:
+            print(f"S2_AUTHOR_ID is not set; searching Semantic Scholar by name {pi_name!r}.")
+            candidates, stats_by_year = fetch_search_papers_year_by_year(
+                session=session,
+                pacer=pacer,
+                pi_name=pi_name,
+                normalized_pi_name=normalized_pi_name,
+                cutoff_date=lab_start_date,
+                s2_author_id=s2_author_id,
+                max_years=args.max_years,
+            )
     except (requests.RequestException, RuntimeError) as exc:
         print(f"Failed to fetch from Semantic Scholar: {exc}")
         if not (os.getenv("S2_API_KEY") or "").strip():

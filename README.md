@@ -30,8 +30,9 @@ Empty sections (alumni, undergrads, carousel, etc.) are hidden until they have e
 3. **Publications (Semantic Scholar):** in Settings → Secrets and variables → Actions, add:
    - Variable `PI_NAME`: the PI's name exactly as it appears on Semantic Scholar.
    - Variable `LAB_START_DATE`: `YYYY-MM-DD`; papers before this date are ignored.
-   - Variable `S2_AUTHOR_ID` (recommended): the number in the PI's Semantic Scholar author URL. This
-     matches papers by author ID, not just by name.
+   - Variable `S2_AUTHOR_ID` (recommended): the number in the PI's Semantic Scholar author URL. When set,
+     the sync adds only papers listed on that profile, so other people with the same name are never included.
+     Without it, the sync searches by `PI_NAME`, which can pick up namesakes.
    - Secret `S2_API_KEY` (recommended): a free key from
      https://www.semanticscholar.org/product/api#api-key-form. Without it, requests are heavily rate-limited.
 
