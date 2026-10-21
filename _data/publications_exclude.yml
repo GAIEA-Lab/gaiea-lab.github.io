@@ -7,3 +7,5 @@ dois:
 
 titles:
   # - "Exact Title of the Paper"   (matched ignoring case and punctuation)
+  - "DivShift: Exploring Domain-Specific Distribution Shift in Volunteer-Collected Biodiversity Datasets"  # arXiv duplicate of the AAAI paper
+  - "Writing A Paper Scene Graph Prediction with Limited Labels"
