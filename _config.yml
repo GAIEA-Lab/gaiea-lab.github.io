@@ -25,7 +25,7 @@ accessibility_url: "" # many universities require an accessibility link in the f
 google_scholar_url: "" # TODO: PI's Google Scholar profile URL
 
 # Linked from the Join Us page
-interest_form_url: "" # TODO: Google Form for prospective students/postdocs
+interest_form_url: "https://docs.google.com/forms/d/e/1FAIpQLScw6BpkDKeFK-CXaf3azT7hgA_n_7Zcb68n4HSB5boJMhPZew/viewform?usp=dialog"
 
 include:
   - .htaccess

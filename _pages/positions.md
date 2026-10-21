@@ -8,8 +8,19 @@ permalink: /join-us
 
 # Join the {{ site.title }}
 
-TODO: Describe open positions (PhD, postdoc, undergraduate, visitors) and how to apply.
+### PhD students
 
-{% if site.interest_form_url.size > 0 %}
-If you are interested in any position with the group, please fill out the [interest survey]({{ site.interest_form_url }}).
-{% endif %}
+We are recruiting PhD students for the 2026–2027 cycle. If you are interested, please fill out the [interest form]({{ site.interest_form_url }}); Lauren will follow up in the fall.
+Applications to the University of Michigan's [PhD in Sustainability](https://seas.umich.edu/academics/doctoral-phd) at SEAS are due December 1. A [dual-degree PhD program](https://rackham.umich.edu/navigating-your-degree/student-initiated-doctoral-program/) is also available.
+
+### Postdocs
+
+If you are interested in a postdoc, please email [Lauren](mailto:gillespl@umich.edu) with your research background, CV, research interests, and the fellowships you are considering (for example, Schmidt AI in Science, President's, or IGCB fellowships).
+
+### Research assistants
+
+We are not currently recruiting research assistants. Please check back periodically.
+
+### Master's students
+
+Please see SEAS master's admissions. We do not have funding for master's students at this time, but there may be opportunities in the future.
