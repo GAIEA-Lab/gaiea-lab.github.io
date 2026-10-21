@@ -423,6 +423,12 @@ hr {
 .person-name { margin: 0 0 4px; font-size: 22px; color: $teal-dark; }
 .person-links { font-size: 16px; }
 
+/* Projects page */
+.software-description-toggle,
+.software-description-toggle::marker,
+.software-description-toggle::-webkit-details-marker { color: $moss-dark; }
+.software-description-toggle:hover { color: $teal-dark; }
+
 /* Tree-line above the footer */
 .treeline { height: 90px; margin-top: 30px; background: url("../images/decor/treeline.svg") bottom / 100% 100% no-repeat; }
 #footer .panel-footer { background-color: $moss; color: #f4f6ec; border-top: 0; margin-top: -1px; }
