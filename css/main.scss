@@ -136,8 +136,8 @@ p.byline {
 }
 
 .person-title {
-  font-size: 0.9em;
-  color: #666;
+  font-size: 0.95em;
+  color: #3f453b;
   margin: 0 0 8px;
 }
 
@@ -383,7 +383,7 @@ $teal-dark: #3f6e70;
 $paper: #fbfaf4;
 $ink: #2f3a2a;
 
-body { background-color: $paper; color: $ink; }
+body { background-color: $paper; color: $ink; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; font-size: 17px; }
 a { color: $moss-dark; }
 a:hover, a:focus { color: $teal-dark; }
 
